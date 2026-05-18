@@ -125,7 +125,7 @@
 
         <div class="input-group div-input">
             <label for="password">Senha</label>
-            <input class="div-input-uni" type="password" id="myInput" placeholder="••••••••" required>
+            <input class="div-input-uni" type="password" id="password" placeholder="••••••••" required>
 
         </div>
 
@@ -145,7 +145,7 @@
 
 <script>
     function myFunction() {
-        var x = document.getElementById("myInput");
+        var x = document.getElementById("password");
         if (x.type === "password") {
             x.type = "text";
         } else {
