@@ -119,13 +119,13 @@
     <form action="/loginSubmit" method="post">
         @csrf
         <div class="input-group div-input">
-            <label for="email">Email</label>
-            <input class="div-input-uni" type="email" id="email" placeholder="seu@email.com" required>
+            <label for="text_username">Email</label>
+            <input class="div-input-uni" type="email" id="email" placeholder="seu@email.com" required name="text_username"> 
         </div>
 
         <div class="input-group div-input">
-            <label for="password">Senha</label>
-            <input class="div-input-uni" type="password" id="password" placeholder="••••••••" required>
+            <label for="text_password">Senha</label>
+            <input class="div-input-uni" type="password" id="password" placeholder="••••••••" required name="text_password">
 
         </div>
 
@@ -139,6 +139,19 @@
         </div>
     </form>
 </div>
+
+
+{{-- errors --}}
+
+@if($errors->any())
+    <div class="alert alert-danger mt-3">
+        <ul class="m-0">
+            @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 
 
