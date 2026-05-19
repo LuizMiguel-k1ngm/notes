@@ -120,13 +120,23 @@
         @csrf
         <div class="input-group div-input">
             <label for="text_username">Email</label>
-            <input class="div-input-uni" type="email" id="email" placeholder="seu@email.com" required name="text_username"> 
+            <input class="div-input-uni" type="email" id="email" placeholder="seu@email.com" required name="text_username">
+            @error('text_username')
+
+            <div class="text-danger">{{$message}}</div>
+
+            @enderror
         </div>
 
         <div class="input-group div-input">
             <label for="text_password">Senha</label>
             <input class="div-input-uni" type="password" id="password" placeholder="••••••••" required name="text_password">
 
+            @error('text_password')
+
+            <div class="text-danger ">{{$message}}</div>
+
+            @enderror
         </div>
 
         <input type="checkbox" onclick="myFunction()"> Visualizar
@@ -138,20 +148,11 @@
             <a href="#">Criar conta</a>
         </div>
     </form>
+
+   
 </div>
 
 
-{{-- errors --}}
-
-@if($errors->any())
-    <div class="alert alert-danger mt-3">
-        <ul class="m-0">
-            @foreach($errors->all() as $error)
-            <li>{{$error}}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
 
 
