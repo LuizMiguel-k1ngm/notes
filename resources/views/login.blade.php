@@ -149,6 +149,19 @@
         </div>
     </form>
 
+    {{-- INVALID LOGIN --}}
+    @if(session('loginError'))
+
+    <div class="alert alert-danger text-center">
+        {{ session('loginError') }}
+    </div>
+   
+
+
+
+
+    @endif
+
    
 </div>
 
