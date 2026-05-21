@@ -6,20 +6,23 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function index($value)
+    public function index()
     {
         // return view('main', ['value' => $value]);
+        // return view('main')->with('value', $value);
+        // echo 'I am inside the echo';
 
-        return view('main')->with('value', $value);
+         return view('home');
+
     }
 
-    public function page2($value)
-    {
-        return view('page2') ->with('value', $value);
+    public function newNote(){
+
+    echo 'new note';
+
     }
 
-    public function page3($value)
-    {
-        return view('page3')->with('value', $value);
-    }
+
 }
+
+    

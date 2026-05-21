@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -69,7 +71,6 @@ class AuthController extends Controller
         $user->last_login = date('Y-m-d H:i:s');
         $user->save();
 
-
         //login user
 
         session([
@@ -79,11 +80,9 @@ class AuthController extends Controller
             ]
         ]);
 
-        echo 'login com sucesso';
+       //redirect to home
 
-
-
-
+       return redirect()->to('/');
 
     }
 
