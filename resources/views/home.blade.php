@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: #292f3b;
+        background: #1823ff;
     }
 
     #title {
@@ -30,17 +30,21 @@
     <div class="row justify-content-center">
         <div class="col">
 
+        <header> 
+          
+            @include('top_bar');
 
-        @include('top_bar');
+        </header>
+       
 
     
 
-            <hr>
+            
 
             <!-- no notes available -->
             <div class="row mt-5">
                 <div class="col text-center">
-                    <p class="display-6 mb-5 text-light opacity-50 ">You have no notes available!</p>
+                    <p class="display-6 mb-5 text-light opacity-60">You have no notes available!</p>
                     <a href="#" class="btn btn-success btn-lg p-3 px-5">
                         <i class="fa-regular fa-pen-to-square me-3"></i>Create Your First Note
                     </a>
@@ -63,7 +67,7 @@
                         <div class="row" id="title">
                             <div class="col">
                                 <h4 class="text-dark">Note Title</h4>
-                                <small class="text-secondary"><span class="opacity-100 me-2 text-dark">Created at:</span><strong class="text-dark">00/00/0000 00:00:00</strong></small>
+                                <small class="text-dark"><span class="opacity-55 me-2 ">Created at:</span><strong class="text-dark">00/00/0000 00:00:00</strong></small>
                             </div>
                             <div class="col text-end">
                                 <a href="#" class="btn btn-outline-secondary btn-sm mx-1"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -71,7 +75,7 @@
                             </div>
                         </div>
                         <hr>
-                        <p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia temporibus necessitatibus nesciunt quam repellat porro commodi autem veniam doloribus nostrum magni rerum, libero ullam maxime praesentium cum velit. Recusandae, aspernatur.</p>
+                        <p class="text-dark ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia temporibus necessitatibus nesciunt quam repellat porro commodi autem veniam doloribus nostrum magni rerum, libero ullam maxime praesentium cum velit. Recusandae, aspernatur.</p>
                     </div>
                 </div>
             </div>
